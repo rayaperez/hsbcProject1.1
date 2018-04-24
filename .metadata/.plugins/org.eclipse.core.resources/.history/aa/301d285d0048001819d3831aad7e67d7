@@ -1,0 +1,43 @@
+package steps;
+
+public class TradesInOutDateRange {
+
+	File f = new File(filePathString);
+	
+	@Given("^I have a file instrument \"([^\"]*)\" and a file trade \"([^\"]*)\"$")
+	public void i_have_a_file_instrument_and_a_file_trade(String arg1, String arg2) {
+	   
+	}
+	
+	@Given("^both files are valid$")
+	public void both_files_are_valid() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Given("^I have a range date from (\\d+)/(\\d+)/(\\d+)$")
+	public void i_have_a_range_date_from(int arg1, int arg2, int arg3) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Given("^I have a date to (\\d+)/(\\d+)/(\\d+)$")
+	public void i_have_a_date_to(int arg1, int arg2, int arg3) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@When("^I check trade transactions for that range$")
+	public void i_check_trade_transactions_for_that_range() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^I receive an output if trade is in or out$")
+	public void i_receive_an_output_if_trade_is_in_or_out() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+
+}

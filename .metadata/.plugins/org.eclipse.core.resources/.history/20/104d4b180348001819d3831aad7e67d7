@@ -1,0 +1,41 @@
+package steps;
+
+import java.io.File;
+import org.apache.log4j.Logger;
+
+public class CommonSteps {
+
+	final static java.util.logging.Logger logger = Logger.getLogger(CommonSteps.class);
+	public File instFile,tradeFile; 
+	/**
+	 * User will only enter the name of the files 
+	 * Files should be avaialble under C:\ driver or any choosen location 
+	 * If there is an issue with the files, user will receive the log details
+	 * I am checking if files name provided by the user is not an empty string
+	 * For improvement point : I will check if format of the files is correct and if it contain correct columns
+	 * @param  inst file name that an user provided
+	 * @param  trade file name that user provided
+	 */
+	@Given("^I have a file instrument \"([^\"]*)\" and a file trade \"([^\"]*)\"$")
+	public void i_have_a_file_instrument_and_a_file_trade(String inst, String trade) {
+		
+		if (inst.isEmpty()){
+			logger.error("Files name not provided : " + inst);
+		}
+		else if (trade.isEmpty()){
+			logger.error("Files name not provided : " + trade);
+		}
+		else {	
+		File instFile = new File("c:\inst"); 
+		File tradeFile = new File("c:\trade");
+		}
+		}
+		
+		@Given("^both files are valid$")
+		public void both_files_are_valid() {
+			if((instFile.exists() && !instFile.isDirectory() && (tradeFile.exists() && !tradeFile.isDirectory()) { 
+				{
+					logger.notify("Files are exist and valid to proceed");
+				}
+		}
+

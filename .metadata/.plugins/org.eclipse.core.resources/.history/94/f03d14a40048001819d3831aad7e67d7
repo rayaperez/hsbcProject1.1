@@ -1,0 +1,11 @@
+package steps;
+
+public class CommonSteps {
+
+File f = new File(filePathString);
+	
+	@Given("^I have a file instrument \"([^\"]*)\" and a file trade \"([^\"]*)\"$")
+	public void i_have_a_file_instrument_and_a_file_trade(String arg1, String arg2) {
+	   
+	}
+}

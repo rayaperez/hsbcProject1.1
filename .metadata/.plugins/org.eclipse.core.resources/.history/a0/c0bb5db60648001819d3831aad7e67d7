@@ -1,0 +1,39 @@
+package steps;
+
+import java.util.Date;
+
+public class TradesInOutDateRange : CommonSteps {
+	
+	private String newDateFrom;
+	private String newDateTo;
+
+    @Given("^I have a range date from \"([^\"]*)\"$")
+	public void dateFrom(String dateFrom) {
+	   
+	}
+
+    @Given("^I have a date to \"([^\"]*)\"$")
+	public void i_have_a_date_to(String dateTo) {
+	    
+	}
+
+	@When("^I check trade transactions for that range$")
+	public void i_check_trade_transactions_for_that_range() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^I receive an output if trade is in or out$")
+	public void i_receive_an_output_if_trade_is_in_or_out() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	private String convertDateFormat(String oldDate)
+	{
+		SimpleDateFormat sdf = new SimpleDateFormat(OLD_FORMAT);
+		Date oldDateParse= sdf.parse(oldDate);
+		sdf.applyPattern(NEW_FORMAT);
+		return sdf.format(oldDateParse);
+	}
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="hsbcProject2" project="hsbcProject2" tests="1" started="1" failures="0" errors="6" ignored="0">
+  <testsuite name="com.instruments.hsbcProject2.Runner" time="0.001">
+    <testsuite name="Feature: Trade List" time="0.001">
+      <testcase name="Trade list" classname="Trade List" time="0.001">
+        <error>cucumber.runtime.junit.UndefinedThrowable: The step "I have a file instrument "inst.txt" and a file trade "trade.txt"" is undefined&#13;
+&#13;
+cucumber.runtime.junit.UndefinedThrowable: The step "both files are valid" is undefined&#13;
+&#13;
+cucumber.runtime.junit.UndefinedThrowable: The step "I have a range date from "30/01/2017"" is undefined&#13;
+&#13;
+cucumber.runtime.junit.UndefinedThrowable: The step "I have a date to "14/01/2018"" is undefined&#13;
+&#13;
+cucumber.runtime.junit.UndefinedThrowable: The step "I check trade transactions for that range" is undefined&#13;
+&#13;
+cucumber.runtime.junit.UndefinedThrowable: The step "I receive an output if trade is in or out" is undefined&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

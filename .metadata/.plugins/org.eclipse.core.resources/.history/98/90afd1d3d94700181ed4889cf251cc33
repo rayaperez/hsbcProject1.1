@@ -1,0 +1,55 @@
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import gherkin.ast.DataTable;
+import cucumber.api.PendingException;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+import java.util.Date;
+
+public class InstrumentList {
+
+	private DataTable instrumentList;
+	private DataTable tradeList;
+	
+	@Given("^I have the list of the instruments$")
+	public void listOfInstruments(DataTable inst)  throws Throwable {
+		this.instrumentList = inst;
+	}
+
+	@Given("^the trades list$")
+	public void tradingList(DataTable trade)  throws Throwable {
+	   this.tradeList = tradeList;
+	}
+
+	
+	// First I will be scanning the list of inst in trading list
+	//If its exist, when I will check if it in or out of date range
+	@When("^I search for the date range from \"([^\"]*)\" and to \"([^\"]*)\"$")
+	public void DateRange(Date fromDate, Date toDate) {
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date1 = sdf.parse("2009-12-31");
+        Date date2 = sdf.parse("2010-01-31");
+
+        System.out.println("date1 : " + sdf.format(date1));
+        System.out.println("date2 : " + sdf.format(date2));
+
+        if (date1.compareTo(date2) > 0) {
+            System.out.println("Date1 is after Date2");
+        } else if (date1.compareTo(date2) < 0) {
+            System.out.println("Date1 is before Date2");
+        } else if (date1.compareTo(date2) == 0) {
+            System.out.println("Date1 is equal to Date2");
+        } else {
+            System.out.println("How to get here?");
+        }
+	}
+	
+	@Then("^I receive the list with all the trades marked if they in or out of this range$")
+	public void listOfInstrumentInOutOfRange() {
+	   
+	}
+
+
+}

@@ -1,0 +1,31 @@
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import cucumber.api.PendingException;
+
+public class InstrumentList {
+
+	
+	@Given("^I have the list of the instruments$")
+	public void listOfInstruments(DataTable inst) {
+		
+	 
+	}
+
+	@Given("^the trades list$")
+	public void tradingList(DataTable trade) {
+	   
+	}
+
+	@When("^I search for the date range from (\\d+)/(\\d+)/(\\d+) and to (\\d+)/(\\d+)/(\\d+)$")
+	public void dateRanges(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
+	   
+	}
+
+	@Then("^I receive the list with all the trades marked if they in or out of this range$")
+	public void listOfInstrumentInOutOfRange() {
+	   
+	}
+
+
+}

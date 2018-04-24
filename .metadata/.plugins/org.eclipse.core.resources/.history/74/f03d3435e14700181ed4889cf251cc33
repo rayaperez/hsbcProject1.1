@@ -1,0 +1,82 @@
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import gherkin.ast.DataTable;
+import cucumber.api.PendingException;
+import static org.hamcrest.CoreMatchers.is;
+import java.util.Date;
+
+public class InstrumentList {
+
+//	private DataTable instrumentList;
+//	private DataTable tradeList;
+	private DataModelTrades trades;
+	private DataModelInstrument instrument
+	private String newDateFrom;
+	private String newDateTo;
+	
+	@Given("^I have the list of the instruments$")
+	public void listOfInstruments(DataTable inst)  throws Throwable {
+		this.instrumentList = inst;
+	}
+
+	@Given("^the trades list$")
+	public void tradingList(DataTable trade)  throws Throwable {
+	   this.tradeList = tradeList;
+	   
+	}
+
+	//Convert dates to the required format to it will be easier to validate the dates
+	//as well as check the ranges
+	
+	@When("^I search for the date range from \"([^\"]*)\" and to \"([^\"]*)\"$")
+	public void DateRange(String fromDate, String toDate) {
+		
+		final String OLD_FORMAT = "dd/MM/yyyy";
+		final String NEW_FORMAT = "yyyy-MM-dd";
+	
+		String oldDateFrom= fromDate;
+		String oldDateTo= toDate;
+		
+		SimpleDateFormat sdf = new SimpleDateFormat(OLD_FORMAT);
+		Date oldDateFromParse= sdf.parse(oldDateFrom);
+		Date oldDateToParse= sdf.parse(oldDateTo);
+		sdf.applyPattern(NEW_FORMAT);
+		newDateFrom = sdf.format(oldDateFromParse);
+		newDateTo = sdf.format(oldDateToParse);
+		
+        if (newDateFrom.compareTo(newDateTo) > 0) {
+            System.out.println("Invalid date, From date %s is Lower then To date %s", sdf.format(newDateFrom),sdf.format(newDateTo));
+        }
+	}
+	
+	// First I will be scanning the list of inst in trading list
+	//If its exist, when I will check if it in or out of date range
+	@Then("^I receive the list with all the trades marked if they in or out of this range$")
+	public void listOfInstrumentInOutOfRange() {
+	  int countTrandedElements = 0;
+	  int countNottradedElemets = 0;
+		for (DataModelTrades trade : trades) {
+		    String tradeInID = trade.InID;
+		    for(DataModelInstrument instrument : instruments) {
+		    	String instInID = instrument.instid
+		    			if(tradeInID.equals(instInID)) {
+		    				String dateofTrade = trade.TradeDtTime;
+		    				if((dateofTrade.compareTo(newDateFrom)>0 && dateofTrade.compareTo(newDateTo)<0) ||
+		    						dateofTrade.compareTo(newDateFrom)==0 && dateofTrade.compareTo(newDateTo)<0)
+		    					      dateofTrade.compareTo(newDateFrom)>0 && dateofTrade.compareTo(newDateTo)==0))
+                          countTrandedElements++;
+							System.out.println("Instrument %s%n traded in the given range date " , instrument.instname);
+		    			}
+		    			else {
+		    				countNottradedElemets++;
+							System.out.println("Instrument %s%n is not traded in the given range date " , instrument.instname);
+		    			}
+		    }   
+		}
+	}
+	
+	convert trading date
+
+
+}

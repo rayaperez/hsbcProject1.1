@@ -1,0 +1,26 @@
+package steps;
+
+import java.io.File;
+import org.apache.log4j.Logger;
+
+public class CommonSteps {
+
+	final static Logger logger = Logger.getLogger(CommonSteps.class);
+	
+	@Given("^I have a file instrument \"([^\"]*)\" and a file trade \"([^\"]*)\"$")
+	public void i_have_a_file_instrument_and_a_file_trade(String inst, String trade) {
+		
+		File instFile = new File("c:\inst"); 
+		File tradeFile = new File("c:\trade");
+		
+		if(f.exists() && !f.isDirectory()) { 
+		    // do something
+		}
+		else
+		{
+			logger.error("Files are not : " + parameter);
+		}
+		File instFile = new File("c:\inst");
+		File tradeFile = new File("c:\trade");
+	}
+}

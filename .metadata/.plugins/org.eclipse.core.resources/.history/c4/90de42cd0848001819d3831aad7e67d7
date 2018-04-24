@@ -1,0 +1,68 @@
+package steps;
+
+import java.util.Date;
+import static org.junit.Assert.*;
+public class TradesInOutDateRange : CommonSteps {
+	
+	private String newDateFrom;
+	private String newDateTo;
+	final String OLD_FORMAT = "dd/MM/yyyy";
+	final String NEW_FORMAT = "yyyy-MM-dd";
+	/**
+	 * To simplify the comparison I decided to convert date to specific format
+	 * Checking if provided is a valid date
+	 * @param  dateFrom file name that user provided
+	 */
+    @Given("^I have a range date from \"([^\"]*)\"$")
+	public void dateFrom(String dateFrom) {
+    	assertTrue(ValidateDate(dateFrom),true)
+    	newDateFrom = convertDateFormat(dateFrom);
+	}
+    
+    /**
+	 * To simplify the comparison I decided to convert date to specific format
+	 * Checking if provided is a valid date
+	 * @param  dateTo file name that user provided
+	 */
+    @Given("^I have a date to \"([^\"]*)\"$")
+	public void dateTo(String dateTo) {
+    	assertTrue((ValidateDate(dateTo),true)
+    	newDateTo = convertDateFormat(dateTo);
+	}
+
+	@When("^I check trade transactions for that range$")
+	public void i_check_trade_transactions_for_that_range() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^I receive an output if trade is in or out$")
+	public void i_receive_an_output_if_trade_is_in_or_out() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	private String convertDateFormat(String oldDate)
+	{
+		SimpleDateFormat sdf = new SimpleDateFormat(OLD_FORMAT);
+		Date oldDateParse= sdf.parse(oldDate);
+		sdf.applyPattern(NEW_FORMAT);
+		return sdf.format(oldDateParse);
+	}
+	
+	private boolean validateDate(string date)
+	{
+		if(date == null){
+			return false;
+			}
+		SimpleDateFormat sdf = new SimpleDateFormat(date);
+		sdf.setLenient(false);
+		try {
+			Date date = sdf.parse(dateToValidate);
+			} catch (ParseException e) {	
+				e.printStackTrace();
+				return false;
+			}
+		return true;
+	}
+}

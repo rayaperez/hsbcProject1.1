@@ -1,0 +1,17 @@
+package com.instruments.hsbcProject2;
+
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		dryRun=true,
+		strict=true,
+		features = {"src/test/resources/features/TradesInOutDateRange.feature"},
+		glue =  {"src/test/resources/steps/TradesInOutDateRange.java"},
+		tags={"@Automated"},
+		plugin={"json:src/test/resources/Report/Automated_Test_Execution_Report.json"}
+		)
+public class Runner {
+}

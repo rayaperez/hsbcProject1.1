@@ -1,0 +1,40 @@
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+import gherkin.ast.DataTable;
+import cucumber.api.PendingException;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertThat;
+import java.util.Date;
+
+public class InstrumentList {
+
+	private DataTable instrumentList;
+	private DataTable tradeList;
+	
+	@Given("^I have the list of the instruments$")
+	public void listOfInstruments(DataTable inst)  throws Throwable {
+		this.instrumentList = inst;
+	}
+
+	@Given("^the trades list$")
+	public void tradingList(DataTable trade)  throws Throwable {
+	   this.tradeList = tradeList;
+	}
+
+	// First I will be scanning the list of inst in trading list
+	//If its exist, when I will check if it in or out of date range
+	@When("^I search for the date range from (\\d+)/(\\d+)/(\\d+) and to (\\d+)/(\\d+)/(\\d+)$")
+	public void i_search_for_the_date_range_from_and_to(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
+		List<List<String>> instrumentListData = instrumentList.getRows();
+		List<List<String>> tradeListData = tradeList.getRows();
+		
+	}
+
+	@Then("^I receive the list with all the trades marked if they in or out of this range$")
+	public void listOfInstrumentInOutOfRange() {
+	   
+	}
+
+
+}

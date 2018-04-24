@@ -1,0 +1,19 @@
+Feature: Instrument that are traded Between the given dates.
+
+  Scenario Outline: Traded Instruments
+    Given I have an instrument list 
+    | instid | instname      |
+    | IN1    | Shares Google |
+    | IN2    | Shares IBM    |
+    | IN3    | Shares XYZ    |
+    And List of trades list
+    | TradeId | TradeDtTime | InID     | qty | price | amount | trader  |
+	| T1      | 30/11/2017  | 23:11:01 | IN1 | 100   |12,1200 | TRADER1 |
+    When I search for the trades for the dates ranges  <dateFrom> and <dateTo>
+    Then I receive the list of all the transactios that are not traded between those dates
+    
+    Examples: 
+    | dateFrom   | dateTo       |
+    | 30/01/2017 | 30/03/2017   |
+    | 30/01/2016 | 29/11/2017   |
+    

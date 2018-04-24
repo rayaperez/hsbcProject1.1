@@ -1,0 +1,31 @@
+Feature: Instrument List
+   As HSBC user
+   In order to review all valid trades
+   I want to receive the list of the instruments that are trades or not between the given dates
+   
+   
+  Scenario Outline: List of the instruments
+      Given I have the list of the instruments as
+      | instid   | <id>    |
+      | instname | <name>  |
+      
+      And the trades list is
+      | TradeID     | <TradeID>     |
+      | TradeDtTime | <TradeDtTime> |
+      | InID        | <InID>        |
+      | qty         | <qty>         |
+      | price       | <price>       |
+      | amount      | <amount>      |
+      | trader      | <trader>      |
+      
+
+      When I search for the date range from "<dateRangeFrom>" and to "<dateRangeTo>"
+      Then I receive the list with all the trades marked if they in or out of this range
+       
+       Examples: 
+       | dateRangeFrom | dateRangeTo | id  | name          | TradeId | TradeDtTime         | InID | qty | price | amount | trader  |
+       | 29/11/2017    | 30/11/2017  | IN1 | Shares Google | T1      | 30/11/2017 23:11:01 | IN1  |100  | 12    | 1200   | TRADER1 |
+       | 29/11/2016    | 30/11/2016  | IN2 | Shares IBM    | T1      | 30/11/2017 23:11:01 | IN1  |100  | 12    | 1200   | TRADER1 |
+       | 29/11/2016    | 30/11/2016  | IN3 | Shares XYZ    | T1      | 30/11/2017 23:11:01 | IN1  |100  | 12    | 1200   | TRADER1 |
+       
+     

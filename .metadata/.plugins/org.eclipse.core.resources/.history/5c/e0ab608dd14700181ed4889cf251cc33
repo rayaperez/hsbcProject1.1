@@ -1,0 +1,42 @@
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+public class InstrumentList {
+
+	
+	@Given("^I have the list of the instruments$")
+	public void i_have_the_list_of_the_instruments(DataTable arg1) {
+	    // Write code here that turns the phrase above into concrete actions
+	    // For automatic transformation, change DataTable to one of
+	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
+	    // E,K,V must be a scalar (String, Integer, Date, enum etc).
+	    // Field names for YourType must match the column names in 
+	    // your feature file (except for spaces and capitalization).
+	    throw new PendingException();
+	}
+
+	@Given("^the trades list$")
+	public void the_trades_list(DataTable arg1) {
+	    // Write code here that turns the phrase above into concrete actions
+	    // For automatic transformation, change DataTable to one of
+	    // List<YourType>, List<List<E>>, List<Map<K,V>> or Map<K,V>.
+	    // E,K,V must be a scalar (String, Integer, Date, enum etc).
+	    // Field names for YourType must match the column names in 
+	    // your feature file (except for spaces and capitalization).
+	    throw new PendingException();
+	}
+
+	@When("^I search for the date range from (\\d+)/(\\d+)/(\\d+) and to (\\d+)/(\\d+)/(\\d+)$")
+	public void i_search_for_the_date_range_from_and_to(int arg1, int arg2, int arg3, int arg4, int arg5, int arg6) {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^I receive the list with all the trades marked if they in or out of this range$")
+	public void i_receive_the_list_with_all_the_trades_marked_if_they_in_or_out_of_this_range() {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+
+}

@@ -1,0 +1,7 @@
+package steps;
+
+public class Instrument {
+
+	public string  instid;
+	public string instname;
+}

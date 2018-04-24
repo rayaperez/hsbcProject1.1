@@ -1,0 +1,12 @@
+package steps;
+
+public class Trades {
+
+	public string TradeId;
+	public string TradeDtTime ;
+	public string InID ;
+	public string qty ;
+	public string price ;
+	public int amount ;
+	public string trader ;
+}

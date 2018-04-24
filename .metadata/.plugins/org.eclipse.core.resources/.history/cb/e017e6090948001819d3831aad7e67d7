@@ -1,0 +1,6 @@
+
+public class DataModelInstrument {
+
+	public string  instid;
+	public string instname;
+}

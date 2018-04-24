@@ -1,0 +1,15 @@
+Feature: Instrument List
+   As HSBC user
+   In order to review all valid trades
+   I want to receive the list of the instruments that are trades or not between the given dates
+   
+   
+  Scenario: List of the instruments
+      Given I have the list of the instruments
+      | instid | instname      |
+      | IN1    | Shares Google |
+      | IN2    | Shares IBM    |
+      | IN3    | Shares XYZ    |
+      And the trades list
+      | TradeId | TradeDtTime         | InID | qty | price | amount | trader  |
+      | T1      | 30/11/2017 23:11:01 | IN1  |100  | 12    | 1200   | TRADER1 |

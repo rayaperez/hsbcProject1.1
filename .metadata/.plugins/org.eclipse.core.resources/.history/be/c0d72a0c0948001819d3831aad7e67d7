@@ -1,0 +1,11 @@
+
+public class DataModelTrades {
+
+	public string TradeId;
+	public string TradeDtTime ;
+	public string InID ;
+	public string qty ;
+	public string price ;
+	public int amount ;
+	public string trader ;
+}
