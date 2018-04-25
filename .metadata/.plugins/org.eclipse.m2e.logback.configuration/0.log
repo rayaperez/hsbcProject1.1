@@ -3431,3 +3431,7 @@ Caused by: java.io.FileNotFoundException: C:\Users\nasim\eclipse-workspace\.meta
 2018-04-25 08:23:35,582 [Worker-33] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /hsbcProject2/src/test/java
 2018-04-25 08:23:35,583 [Worker-33] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /hsbcProject2/src/test/resources
 2018-04-25 08:23:35,936 [Worker-33] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec
+2018-04-25 13:45:52,591 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-25 13:45:52,592 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\nasim\eclipse-workspace\hsbcProject2\src\main\resources
+2018-04-25 13:45:52,596 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-25 13:45:52,598 [Worker-62] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
