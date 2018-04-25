@@ -1,12 +1,10 @@
 package steps;
 
 import java.util.Date;
-
 import org.apache.log4j.Logger;
-
 import gherkin.ast.DataTable;
-
 import static org.junit.Assert.*;
+
 public class TradesInOutDateRange : CommonSteps {
 	
 	private String newDateFrom;
@@ -14,6 +12,8 @@ public class TradesInOutDateRange : CommonSteps {
 	final String OLD_FORMAT = "dd/MM/yyyy";
 	final String NEW_FORMAT = "yyyy-MM-dd";
 	final static java.util.logging.Logger logger = Logger.getLogger(CommonSteps.class);
+	
+	
 	/**
 	 * To simplify the comparison I decided to convert date to specific format
 	 * Checking if provided is a valid date
@@ -24,6 +24,7 @@ public class TradesInOutDateRange : CommonSteps {
     	assertTrue(ValidateDate(dateFrom),true)
     	newDateFrom = convertDateFormat(dateFrom);
 	}
+    
     
     /**
 	 * To simplify the comparison I decided to convert date to specific format
@@ -47,6 +48,8 @@ public class TradesInOutDateRange : CommonSteps {
         logger.error(String.format("Invalid date, From date %s is Lower then To date %s", sdf.format(newDateFrom),sdf.format(newDateTo)));
         }
 	}
+
+
 	/**
 	 * Looping through the trades and checking one by one if instruction is presented
 	 * If it presented, checking if it inside or outside the date range
@@ -82,6 +85,7 @@ public class TradesInOutDateRange : CommonSteps {
 		}
 	}
 
+	
 	private String convertDateFormat(String oldDate)
 	{
 		SimpleDateFormat sdf = new SimpleDateFormat(OLD_FORMAT);

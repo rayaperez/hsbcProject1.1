@@ -46,7 +46,6 @@ INDEX VERSION 1.130+C:\Users\nasim\eclipse-workspace\.metadata\.plugins\org.ecli
 1840532546.index
 772064435.index
 1225809654.index
-2755326141.index
 2531666063.index
 3089506297.index
 3989133755.index

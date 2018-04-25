@@ -3421,3 +3421,13 @@ Caused by: java.io.FileNotFoundException: C:\Users\nasim\eclipse-workspace\.meta
 2018-04-24 22:57:52,486 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\nasim\eclipse-workspace\hsbcProject2\src\main\resources
 2018-04-24 22:57:52,488 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-04-24 22:57:52,490 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2018-04-25 08:23:16,466 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-25 08:23:16,467 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\nasim\eclipse-workspace\hsbcProject2\src\main\resources
+2018-04-25 08:23:16,469 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-04-25 08:23:16,469 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2018-04-25 08:23:33,605 [Worker-33] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2018-04-25 08:23:34,290 [Worker-33] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.instruments:hsbcProject2:0.0.1-SNAPSHOT @ C:\Users\nasim\eclipse-workspace\hsbcProject2\pom.xml.
+2018-04-25 08:23:35,581 [Worker-33] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /hsbcProject2/src/main/java
+2018-04-25 08:23:35,582 [Worker-33] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /hsbcProject2/src/test/java
+2018-04-25 08:23:35,583 [Worker-33] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /hsbcProject2/src/test/resources
+2018-04-25 08:23:35,936 [Worker-33] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 2 sec

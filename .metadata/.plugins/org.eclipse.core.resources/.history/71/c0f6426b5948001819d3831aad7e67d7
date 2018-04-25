@@ -7,7 +7,6 @@ public class CommonSteps {
 
 	final static java.util.logging.Logger logger = Logger.getLogger(CommonSteps.class);
 	public File instFile,tradeFile; 
-	
 	/**
 	 * User will only enter the name of the files 
 	 * Files should be avaialble under C:\ driver or any choosen location 
