@@ -42,7 +42,10 @@ public class CommonSteps {
 
 	
 	private void readFileAndMapToObject() {
-		
-		// Here I will scan files and map it to the objects Instrument and Trades
+		Instrument instrument = new Instrument();
+		try(FileInputStream inputStream = new FileInputStream(instFile)) {     
+		    String str = IOUtils.toString(inputStream);
+		    instrument.
+		}
 	}
 	

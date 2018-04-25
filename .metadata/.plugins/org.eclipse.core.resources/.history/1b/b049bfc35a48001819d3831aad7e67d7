@@ -33,16 +33,9 @@ public class CommonSteps {
 	}
 	
 	@Given("^both files are valid$")
-	public void filesValidator() {
+	public void filesvalidator() {
 		if((instFile.exists() && !instFile.isDirectory() && (tradeFile.exists() && !tradeFile.isDirectory()) throws Throwable {
 			logger.notify("Files are exist and valid to proceed");
 		}
-		readFileAndMapToObject();
 	}
 
-	
-	private void readFileAndMapToObject() {
-		
-		// Here I will scan files and map it to the objects Instrument and Trades
-	}
-	
